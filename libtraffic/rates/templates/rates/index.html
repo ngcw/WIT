@@ -1,9 +1,0 @@
-{% if latest_rate_list %}
-    <ul>
-    {% for rate in latest_rate_list %}
-        <li><a href="/rates/{{ rate.id }}/">{{ rate.library }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No traffic are available.</p>
-{% endif %}
