@@ -1,0 +1,9 @@
+<h1>{{ rate.library }}</h1>
+
+<ul>
+{% for choice in rate.choice_set.all %}
+    <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="/rates/{{ rate.id }}/">Vote again?</a>
