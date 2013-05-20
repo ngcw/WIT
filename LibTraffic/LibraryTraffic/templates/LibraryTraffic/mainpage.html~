@@ -1,0 +1,9 @@
+{% if Libraries %}
+    <ul>
+    {% for Library in Libraries %}
+        <li><a href="/LibraryTraffic/{{ Library.id }}/">{{ Library.LibraryName }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Library are available.</p>
+{% endif %}

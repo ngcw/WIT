@@ -1,0 +1,35 @@
+from django.http import HttpResponse
+from LibraryTraffic.models import *
+from django.template import Context, loader
+
+def index(request):
+    Libraries = Library.objects.all()
+    template = loader.get_template('LibraryTraffic/index.html')
+    context = Context({
+        'Libraries': Libraries,
+    })
+    return HttpResponse(template.render(context))
+    
+def detail(request, Library_id):
+    LibraryDetails =  Library.objects.filter(id=Library_id)
+    template = loader.get_template('LibraryTraffic/library_info.html')
+    context = Context({
+        'Library': LibraryDetails[0],
+    })
+    return HttpResponse(template.render(context))
+    
+def detail(request, Library_id):
+    LibraryDetails =  Library.objects.filter(id=Library_id)
+    template = loader.get_template('LibraryTraffic/library_info.html')
+    context = Context({
+        'Library': LibraryDetails[0],
+    })
+    return HttpResponse(template.render(context)) 
+    
+def bookroom(request, Library_id):
+    LibraryRooms =  Room.objects.filter(Library=Library_id)
+    template = loader.get_template('LibraryTraffic/bookroom.html')
+    context = Context({
+        'LibraryRooms': LibraryRooms,
+    })
+    return HttpResponse(template.render(context))     

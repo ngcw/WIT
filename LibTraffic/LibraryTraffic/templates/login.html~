@@ -1,0 +1,19 @@
+
+
+    <form method="get" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="UniEmail"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="Password"/></td>
+            </tr>
+       </table>
+
+       <input type="hidden" name="next" value="/rates/" />
+       <input type="submit" value="login" />
+   </form>
+

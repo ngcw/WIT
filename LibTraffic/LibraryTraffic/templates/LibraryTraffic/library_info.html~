@@ -1,0 +1,14 @@
+<h3> {{ Library.LibraryName }} </h3>
+
+<p> Location: {{ Library.Location }} </p>
+<h4> {{ Library.OperatePeriod }} </h4>
+<p> Monday :{{ Library.Monday }} </p>
+<p> Tuesday :{{ Library.Tuesday }} </p>
+<p> Wednesday :{{ Library.Wednesday }} </p>
+<p> Thursday :{{ Library.Thursday }} </p>
+<p> Friday :{{ Library.Friday }} </p>
+<p> Saturday :{{ Library.Saturday }} </p>
+<p> Sunday :{{ Library.Sunday }} </p>
+
+<a href="/LibraryTraffic/{{ Library.id }}/bookroom">Book Room</a>
+<a href="/LibraryTraffic/">Back</a>
